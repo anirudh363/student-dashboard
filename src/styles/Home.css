@@ -1,0 +1,97 @@
+/* Container for the content below the navbar */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, rgb(199, 220, 247), rgb(131, 180, 228)); */
+    /* background: linear-gradient(135deg, rgb(232, 255, 55), rgb(234, 204, 50)); */
+    /* background: linear-gradient(135deg, #FFEA00, #FDDA0D); */
+    background: linear-gradient(135deg, rgb(251, 236, 93), rgb(252, 245, 95));
+}
+
+/* Flex wrapper for the cards */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    /* Center the cards horizontally */
+    align-items: center;
+    /* Center the cards vertically */
+    gap: 2rem;
+    /* Space between the cards */
+    /* flex-wrap: wrap; */
+    /* Allow the cards to wrap if necessary */
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Card styling */
+.card-wrapper>* {
+    flex: 1 1 250px;
+    /* Flexible width for each card */
+    max-width: 300px;
+    /* Max width of each card */
+    min-width: 200px;
+    /* Min width to ensure cards don't shrink too small */
+    /* height: 250px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    /* White background for each card */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+/* Hover effect for cards */
+.card-wrapper>*:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Darker shadow on hover */
+}
+
+/* Additional card content padding */
+.attendance-chart-card,
+.profile-home-card,
+.attendance-calendar-card {
+    padding: 1rem;
+    /* Inner padding for content */
+    width: 100%;
+}
+
+/* Responsive design: stack the cards vertically for smaller screens */
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        flex-direction: column;
+        /* Stack cards vertically on small screens */
+        gap: 1rem;
+        padding-top: 2rem;
+        /* Reduce space between stacked cards */
+    }
+
+    .home-container {
+        padding-top: 5rem;
+        /* Adjust top padding for smaller screens */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card-wrapper {
+        flex-direction: column;
+        /* Stack cards vertically on small screens */
+        gap: 1rem;
+        padding-top: 2rem;
+        /* Reduce space between stacked cards */
+    }
+
+    .home-container {
+        padding-top: 5rem;
+        /* Adjust top padding for smaller screens */
+    }
+}
